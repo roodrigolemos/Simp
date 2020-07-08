@@ -10,11 +10,45 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: IBOUTLET
+    @IBOutlet weak var currentMonth: UILabel!
+    @IBOutlet weak var totalIncome: UILabel!
+    @IBOutlet weak var restIncome: UILabel!
+    @IBOutlet weak var monthSelected: UICollectionView!
+    @IBOutlet weak var tableViewSpent: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        monthSelected.dataSource = self
+        monthSelected.delegate = self
+        tableViewSpent.dataSource = self
+        tableViewSpent.dataSource = self
     }
 
 
+}
+
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
+}
+
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
+    
 }
 

@@ -13,6 +13,8 @@
 		B7267ACE24B5044C004999B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7267ACC24B5044C004999B5 /* Main.storyboard */; };
 		B7267AD024B5044E004999B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7267ACF24B5044E004999B5 /* Assets.xcassets */; };
 		B7267AD324B5044E004999B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7267AD124B5044E004999B5 /* LaunchScreen.storyboard */; };
+		B7CC047024B7499500D617FF /* spentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC046F24B7499500D617FF /* spentTableViewCell.swift */; };
+		B7CC047424B8FD1E00D617FF /* monthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC047324B8FD1E00D617FF /* monthCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B7267ACF24B5044E004999B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7267AD224B5044E004999B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7267AD424B5044E004999B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7CC046F24B7499500D617FF /* spentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spentTableViewCell.swift; sourceTree = "<group>"; };
+		B7CC047324B8FD1E00D617FF /* monthCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monthCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		B7267AC524B5044C004999B5 /* Simp */ = {
 			isa = PBXGroup;
 			children = (
+				B7CC046C24B7492B00D617FF /* Model */,
+				B7CC046D24B7493600D617FF /* View */,
+				B7CC046E24B7493B00D617FF /* Controller */,
 				B7267AC624B5044C004999B5 /* AppDelegate.swift */,
 				B7267AC824B5044C004999B5 /* SceneDelegate.swift */,
-				B7267ACA24B5044C004999B5 /* ViewController.swift */,
 				B7267ACC24B5044C004999B5 /* Main.storyboard */,
 				B7267ACF24B5044E004999B5 /* Assets.xcassets */,
 				B7267AD124B5044E004999B5 /* LaunchScreen.storyboard */,
 				B7267AD424B5044E004999B5 /* Info.plist */,
 			);
 			path = Simp;
+			sourceTree = "<group>";
+		};
+		B7CC046C24B7492B00D617FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B7CC046D24B7493600D617FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B7CC047224B74AE200D617FF /* CollectionView */,
+				B7CC047124B74AD800D617FF /* TableView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B7CC046E24B7493B00D617FF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B7267ACA24B5044C004999B5 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B7CC047124B74AD800D617FF /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				B7CC046F24B7499500D617FF /* spentTableViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		B7CC047224B74AE200D617FF /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				B7CC047324B8FD1E00D617FF /* monthCollectionViewCell.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +184,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7CC047024B7499500D617FF /* spentTableViewCell.swift in Sources */,
 				B7267ACB24B5044C004999B5 /* ViewController.swift in Sources */,
+				B7CC047424B8FD1E00D617FF /* monthCollectionViewCell.swift in Sources */,
 				B7267AC724B5044C004999B5 /* AppDelegate.swift in Sources */,
 				B7267AC924B5044C004999B5 /* SceneDelegate.swift in Sources */,
 			);
@@ -294,7 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rodrigolemos.Simp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rodrigolemos.Simp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

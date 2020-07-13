@@ -21,9 +21,25 @@ class NewExpanseVC: UIViewController {
     
         configureTextField()
         configureButtons()
+        createDatePicker()
     }
+
+    // MARK: My Methods
+    let datePicker = UIDatePicker()
     
-    
+    func createDatePicker() {
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        doneBtn.tintColor = UIColor(red: 38/255, green: 11/255, blue: 95/255, alpha: 1)
+        toolBar.setItems([doneBtn], animated: true)
+        
+        dateTextField.inputAccessoryView = toolBar
+        dateTextField.inputView = datePicker
+        
+        datePicker.datePickerMode = .date
+    }
     
     func configureButtons() {
         fixedTransaction.layer.cornerRadius = 15
@@ -36,4 +52,13 @@ class NewExpanseVC: UIViewController {
         dateTextField.configure()
     }
     
+    // MARK: OBJCs
+    @objc func donePressed() {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        
+        dateTextField.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+    }
 }

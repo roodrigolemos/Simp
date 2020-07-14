@@ -292,30 +292,6 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R8m-q2-07f" customClass="typeTransactionButton" customModule="Simp" customModuleProvider="target">
-                                <rect key="frame" x="39" y="495" width="142" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.16770601269999999" green="0.034880205990000003" blue="0.41578605769999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="Fixed">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="fixedButtonPressed:" destination="efl-2P-mDr" eventType="touchUpInside" id="gI1-fF-o2v"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ja8-py-a3v" customClass="typeTransactionButton" customModule="Simp" customModuleProvider="target">
-                                <rect key="frame" x="212" y="495" width="142" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.16770601269999999" green="0.034880205990000003" blue="0.41578605769999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="Installment">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="installmentButtonPressed:" destination="efl-2P-mDr" eventType="touchUpInside" id="b8f-NA-Zlr"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOM-ZU-ZZQ">
                                 <rect key="frame" x="91" y="680" width="211" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -324,6 +300,26 @@
                                 <state key="normal" title="Save Expanse">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7pI-Jq-KeB" customClass="typeTransactionTextField" customModule="Simp" customModuleProvider="target">
+                                <rect key="frame" x="39" y="495" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FmB-ze-uFg" customClass="typeTransactionTextField" customModule="Simp" customModuleProvider="target">
+                                <rect key="frame" x="212" y="495" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnZ-4j-9Gy">
+                                <rect key="frame" x="360" y="495" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="BU"/>
+                                <connections>
+                                    <action selector="resetTransactions:" destination="efl-2P-mDr" eventType="touchUpInside" id="ndi-Ap-n0a"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -334,8 +330,8 @@
                     <connections>
                         <outlet property="amountTextField" destination="Q1O-wm-SJF" id="hk6-l6-LPM"/>
                         <outlet property="dateTextField" destination="rdq-bZ-MzH" id="SCT-WO-znC"/>
-                        <outlet property="fixedTransaction" destination="R8m-q2-07f" id="jIu-qP-bXX"/>
-                        <outlet property="installmentTransaction" destination="ja8-py-a3v" id="FRP-p4-WGv"/>
+                        <outlet property="fixedTransaction" destination="7pI-Jq-KeB" id="WqQ-Tg-Dny"/>
+                        <outlet property="installmentTransaction" destination="FmB-ze-uFg" id="zma-Us-qdV"/>
                         <outlet property="saveExpanse" destination="AOM-ZU-ZZQ" id="w6G-Ur-qZe"/>
                     </connections>
                 </viewController>

@@ -79,17 +79,6 @@ class NewExpanseVC: UIViewController {
         installmentTransaction.inputView = installmentPicker
     }
     
-    func configureButtons() {
-        saveExpanse.layer.cornerRadius = 15
-    }
-    
-    func configureTextField() {
-        amountTextField.configure()
-        dateTextField.configure()
-        fixedTransaction.configure(bacgkroundColor: .white, titleColor: .darkGray, borderWidth: 1, borderColor: UIColor.darkGray.cgColor, title: "Fixed")
-        installmentTransaction.configure(bacgkroundColor: .white, titleColor: .darkGray, borderWidth: 1, borderColor: UIColor.darkGray.cgColor, title: "Installment")
-    }
-    
     // MARK: TARGETs
     func addTargets() {
         fixedTransaction.addTarget(self, action: #selector(fixedTapped), for: .touchDown)
@@ -127,6 +116,18 @@ class NewExpanseVC: UIViewController {
         installmentTransaction.textColor = .darkGray
         installmentTransaction.text = "Installment"
         isEditing = false
+    }
+    
+    // MARK: Configure Methods
+    func configureButtons() {
+        saveExpanse.layer.cornerRadius = 15
+    }
+       
+    func configureTextField() {
+        amountTextField.configure()
+        dateTextField.configure()
+        fixedTransaction.configure(bacgkroundColor: .white, titleColor: .darkGray, borderWidth: 1, borderColor: UIColor.darkGray.cgColor, title: "Fixed")
+        installmentTransaction.configure(bacgkroundColor: .white, titleColor: .darkGray, borderWidth: 1, borderColor: UIColor.darkGray.cgColor, title: "Installment")
     }
 }
 

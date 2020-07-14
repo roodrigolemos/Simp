@@ -13,6 +13,7 @@
 		B7267ACE24B5044C004999B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7267ACC24B5044C004999B5 /* Main.storyboard */; };
 		B7267AD024B5044E004999B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7267ACF24B5044E004999B5 /* Assets.xcassets */; };
 		B7267AD324B5044E004999B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7267AD124B5044E004999B5 /* LaunchScreen.storyboard */; };
+		B729727E24BDEE3E000D1E27 /* typeTransactionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B729727D24BDEE3E000D1E27 /* typeTransactionButton.swift */; };
 		B777BB7224BCF2EE00099D05 /* NewExpanseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777BB7124BCF2EE00099D05 /* NewExpanseVC.swift */; };
 		B777BB7724BCFA4F00099D05 /* ExpanseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777BB7624BCFA4F00099D05 /* ExpanseTextField.swift */; };
 		B7CC047024B7499500D617FF /* spentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC046F24B7499500D617FF /* spentTableViewCell.swift */; };
@@ -28,6 +29,7 @@
 		B7267ACF24B5044E004999B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7267AD224B5044E004999B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7267AD424B5044E004999B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B729727D24BDEE3E000D1E27 /* typeTransactionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeTransactionButton.swift; sourceTree = "<group>"; };
 		B777BB7124BCF2EE00099D05 /* NewExpanseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExpanseVC.swift; sourceTree = "<group>"; };
 		B777BB7624BCFA4F00099D05 /* ExpanseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpanseTextField.swift; sourceTree = "<group>"; };
 		B7CC046F24B7499500D617FF /* spentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spentTableViewCell.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		B777BB7824BCFD5300099D05 /* Button */ = {
 			isa = PBXGroup;
 			children = (
+				B729727D24BDEE3E000D1E27 /* typeTransactionButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			files = (
 				B7CC047024B7499500D617FF /* spentTableViewCell.swift in Sources */,
 				B7267ACB24B5044C004999B5 /* HomeVC.swift in Sources */,
+				B729727E24BDEE3E000D1E27 /* typeTransactionButton.swift in Sources */,
 				B777BB7724BCFA4F00099D05 /* ExpanseTextField.swift in Sources */,
 				B7CC047424B8FD1E00D617FF /* monthCollectionViewCell.swift in Sources */,
 				B7267AC724B5044C004999B5 /* AppDelegate.swift in Sources */,

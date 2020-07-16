@@ -9,13 +9,14 @@
 import UIKit
 
 class NewExpanseVC: UIViewController {
-    
+   
     // MARK: IBOUTLET
     @IBOutlet weak var amountTextField: ExpanseTextField!
     @IBOutlet weak var dateTextField: ExpanseTextField!
     @IBOutlet weak var saveExpanse: UIButton!
     @IBOutlet weak var fixedTransaction: typeTransactionTextField!
     @IBOutlet weak var installmentTransaction: typeTransactionTextField!
+    @IBOutlet weak var categoryButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,16 @@ class NewExpanseVC: UIViewController {
         
         selectedMonth = nil
         installmentPicker.selectRow(0, inComponent: 0, animated: true)
+    }
+    
+    // MARK: Swift Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCategory" {
+            if segue.destination is CategoryVC {
+                let categoryVC = segue.destination as? CategoryVC
+                categoryVC?.categoryDelegate = self
+            }
+        }
     }
     
     // MARK: My Methods
@@ -132,6 +143,12 @@ class NewExpanseVC: UIViewController {
 }
 
 // MARK: EXTENSIONS
+extension NewExpanseVC: CategoryDelegate {
+    func selectedCategory(categoryImage: UIImage) {
+        categoryButton.setImage(categoryImage, for: .normal)
+    }
+}
+
 extension NewExpanseVC: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

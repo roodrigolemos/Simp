@@ -325,11 +325,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZe-2h-wL9">
-                                <rect key="frame" x="58" y="587" width="51" height="44"/>
+                                <rect key="frame" x="52" y="587" width="63" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="other"/>
                                 <connections>
-                                    <segue destination="O55-OM-5vi" kind="show" id="zZn-v7-hPy"/>
+                                    <segue destination="O55-OM-5vi" kind="show" identifier="toCategory" id="zZn-v7-hPy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -340,6 +340,7 @@
                     <navigationItem key="navigationItem" id="x1A-a4-cDG"/>
                     <connections>
                         <outlet property="amountTextField" destination="Q1O-wm-SJF" id="hk6-l6-LPM"/>
+                        <outlet property="categoryButton" destination="EZe-2h-wL9" id="ZRH-bG-DUC"/>
                         <outlet property="dateTextField" destination="rdq-bZ-MzH" id="SCT-WO-znC"/>
                         <outlet property="fixedTransaction" destination="7pI-Jq-KeB" id="WqQ-Tg-Dny"/>
                         <outlet property="installmentTransaction" destination="FmB-ze-uFg" id="zma-Us-qdV"/>
@@ -350,10 +351,10 @@
             </objects>
             <point key="canvasLocation" x="598.55072463768124" y="559.82142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--CategoryVC-->
         <scene sceneID="DIu-H0-Hir">
             <objects>
-                <viewController id="O55-OM-5vi" sceneMemberID="viewController">
+                <viewController id="O55-OM-5vi" customClass="CategoryVC" customModule="Simp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j29-br-Vaz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -378,6 +379,9 @@
                                                                     <constraint firstAttribute="width" secondItem="1gB-aW-wMS" secondAttribute="height" multiplier="1:1" id="uRy-Cq-cZ7"/>
                                                                 </constraints>
                                                                 <state key="normal" image="food"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="teF-Mq-N3J"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubY-ya-IoC">
                                                                 <rect key="frame" x="17.5" y="71" width="28.5" height="14.5"/>
@@ -398,6 +402,9 @@
                                                                     <constraint firstAttribute="height" constant="63" id="vBL-O7-AZV"/>
                                                                 </constraints>
                                                                 <state key="normal" image="subscription"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="nQv-0i-S75"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvm-ED-LZH">
                                                                 <rect key="frame" x="17.5" y="71" width="28.5" height="14.5"/>
@@ -418,6 +425,9 @@
                                                                     <constraint firstAttribute="width" constant="63" id="V0T-Nc-poT"/>
                                                                 </constraints>
                                                                 <state key="normal" image="restaurant"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="xpn-Ro-kNW"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wF-eB-O2w">
                                                                 <rect key="frame" x="1" y="71" width="61.5" height="14.5"/>
@@ -438,6 +448,9 @@
                                                                     <constraint firstAttribute="height" constant="63" id="jX9-1u-e66"/>
                                                                 </constraints>
                                                                 <state key="normal" image="home"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="yij-6b-hWW"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bix-ju-JWK">
                                                                 <rect key="frame" x="15" y="71" width="33.5" height="14.5"/>
@@ -463,6 +476,9 @@
                                                                     <constraint firstAttribute="width" secondItem="hbX-Cw-LYc" secondAttribute="height" multiplier="1:1" id="eSX-81-iVM"/>
                                                                 </constraints>
                                                                 <state key="normal" image="shopping"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="BBA-KV-fJa"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shopping" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgW-nC-RHg">
                                                                 <rect key="frame" x="4.5" y="71" width="54" height="14.5"/>
@@ -483,6 +499,9 @@
                                                                     <constraint firstAttribute="height" constant="63" id="ZIT-d7-IzT"/>
                                                                 </constraints>
                                                                 <state key="normal" image="selfCare"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="u5E-43-Gi9"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Self Care" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ri-sr-riH">
                                                                 <rect key="frame" x="5.5" y="71" width="52" height="14.5"/>
@@ -503,6 +522,9 @@
                                                                     <constraint firstAttribute="width" secondItem="efe-WL-O4G" secondAttribute="height" multiplier="1:1" id="SR9-iA-QAL"/>
                                                                 </constraints>
                                                                 <state key="normal" image="debt"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="sei-21-RV8"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Debts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKd-14-PKL">
                                                                 <rect key="frame" x="15" y="71" width="33.5" height="14.5"/>
@@ -523,6 +545,9 @@
                                                                     <constraint firstAttribute="width" constant="63" id="vwh-qj-QDt"/>
                                                                 </constraints>
                                                                 <state key="normal" image="education"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="3I9-w2-aXa"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Education" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBb-Wv-JDU">
                                                                 <rect key="frame" x="3.5" y="71" width="56.5" height="14.5"/>
@@ -548,6 +573,9 @@
                                                                     <constraint firstAttribute="height" constant="63" id="UMp-6F-MSN"/>
                                                                 </constraints>
                                                                 <state key="normal" image="family"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="1Lk-US-ShN"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyR-xJ-TLh">
                                                                 <rect key="frame" x="13.5" y="71" width="36.5" height="14.5"/>
@@ -568,6 +596,9 @@
                                                                     <constraint firstAttribute="width" secondItem="OAd-90-rrg" secondAttribute="height" multiplier="1:1" id="Mgw-qv-x3s"/>
                                                                 </constraints>
                                                                 <state key="normal" image="tax"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="O2S-al-h4m"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tax" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usY-z7-E8M">
                                                                 <rect key="frame" x="22" y="71" width="19.5" height="14.5"/>
@@ -588,6 +619,9 @@
                                                                     <constraint firstAttribute="width" constant="63" id="VF0-2U-yUy"/>
                                                                 </constraints>
                                                                 <state key="normal" image="investment"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="XYe-xY-3Ha"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Investment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9E-LG-Dgl">
                                                                 <rect key="frame" x="0.5" y="71" width="62.5" height="14.5"/>
@@ -608,6 +642,9 @@
                                                                     <constraint firstAttribute="width" constant="63" id="k4p-V5-ccJ"/>
                                                                 </constraints>
                                                                 <state key="normal" image="lazerHobby"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="bXh-IR-E7K"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hobby" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDv-0k-RRY">
                                                                 <rect key="frame" x="13" y="71" width="37.5" height="14.5"/>
@@ -633,6 +670,9 @@
                                                                     <constraint firstAttribute="height" constant="63" id="oPG-MP-spb"/>
                                                                 </constraints>
                                                                 <state key="normal" image="grocery"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="8iq-Qu-SNf"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Groceries" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rlr-QJ-Qt6">
                                                                 <rect key="frame" x="4" y="71" width="55" height="14.5"/>
@@ -653,6 +693,9 @@
                                                                     <constraint firstAttribute="height" constant="63" id="bsl-qj-hTA"/>
                                                                 </constraints>
                                                                 <state key="normal" image="other"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="4nE-0f-owY"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pt8-fS-yXc">
                                                                 <rect key="frame" x="15.5" y="71" width="32.5" height="14.5"/>
@@ -673,6 +716,9 @@
                                                                     <constraint firstAttribute="height" constant="63" id="sPs-lk-vPS"/>
                                                                 </constraints>
                                                                 <state key="normal" image="pets"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="X10-KE-1KF"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4H-Qc-EFk">
                                                                 <rect key="frame" x="19" y="71" width="25" height="14.5"/>
@@ -693,6 +739,9 @@
                                                                     <constraint firstAttribute="height" constant="63" id="fRt-IJ-a4J"/>
                                                                 </constraints>
                                                                 <state key="normal" image="giftDonations"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="3fD-zC-VfX"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gifts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TqZ-kj-Ui7">
                                                                 <rect key="frame" x="18" y="71" width="27" height="14.5"/>
@@ -718,6 +767,9 @@
                                                                     <constraint firstAttribute="width" constant="63" id="ecQ-e6-sRb"/>
                                                                 </constraints>
                                                                 <state key="normal" image="clothes"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="ac5-c5-6mt"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clothes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjQ-B8-Au3">
                                                                 <rect key="frame" x="10" y="71" width="43.5" height="14.5"/>
@@ -738,6 +790,9 @@
                                                                     <constraint firstAttribute="width" secondItem="apr-q9-oK1" secondAttribute="height" multiplier="1:1" id="t8m-MT-C1x"/>
                                                                 </constraints>
                                                                 <state key="normal" image="health"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="ivp-dL-CGZ"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GS-T3-JYw">
                                                                 <rect key="frame" x="13" y="71" width="37" height="14.5"/>
@@ -758,6 +813,9 @@
                                                                     <constraint firstAttribute="width" secondItem="JfW-BL-n3a" secondAttribute="height" multiplier="1:1" id="iEd-eE-J7a"/>
                                                                 </constraints>
                                                                 <state key="normal" image="work"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="pRw-uG-QCf"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EEz-CJ-Kqk">
                                                                 <rect key="frame" x="17" y="71" width="29.5" height="14.5"/>
@@ -778,6 +836,9 @@
                                                                     <constraint firstAttribute="height" constant="63" id="Nac-TP-TKg"/>
                                                                 </constraints>
                                                                 <state key="normal" image="transport"/>
+                                                                <connections>
+                                                                    <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="GUU-AU-0lz"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transport" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muE-gb-lcc">
                                                                 <rect key="frame" x="4" y="71" width="55" height="14.5"/>
@@ -805,6 +866,9 @@
                                                             <constraint firstAttribute="width" secondItem="J3b-AA-5yA" secondAttribute="height" multiplier="1:1" id="cHn-or-apT"/>
                                                         </constraints>
                                                         <state key="normal" image="travel"/>
+                                                        <connections>
+                                                            <action selector="categorySelected:" destination="O55-OM-5vi" eventType="touchUpInside" id="OwY-0H-doP"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57K-qr-xeI">
                                                         <rect key="frame" x="14.5" y="71" width="34" height="14.5"/>
@@ -827,10 +891,13 @@
                         <viewLayoutGuide key="safeArea" id="O4e-hZ-lXN"/>
                     </view>
                     <navigationItem key="navigationItem" id="Xaf-No-toa"/>
+                    <connections>
+                        <outlet property="foodButton" destination="1gB-aW-wMS" id="PB6-t1-uoV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZpX-XB-rvg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="598.55072463768124" y="1227.4553571428571"/>
+            <point key="canvasLocation" x="599" y="1292"/>
         </scene>
         <!--Item-->
         <scene sceneID="g5t-tx-SY3">

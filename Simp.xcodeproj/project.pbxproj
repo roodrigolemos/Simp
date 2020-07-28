@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AC60E7D62595DB00EBF64DA /* Pods_Simp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBF7C6CD934B9526C16E999 /* Pods_Simp.framework */; };
 		B7267AC724B5044C004999B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7267AC624B5044C004999B5 /* AppDelegate.swift */; };
 		B7267AC924B5044C004999B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7267AC824B5044C004999B5 /* SceneDelegate.swift */; };
 		B7267ACB24B5044C004999B5 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7267ACA24B5044C004999B5 /* HomeVC.swift */; };
@@ -20,9 +21,11 @@
 		B777BB7724BCFA4F00099D05 /* ExpanseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777BB7624BCFA4F00099D05 /* ExpanseTextField.swift */; };
 		B7CC047024B7499500D617FF /* spentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC046F24B7499500D617FF /* spentTableViewCell.swift */; };
 		B7CC047424B8FD1E00D617FF /* monthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC047324B8FD1E00D617FF /* monthCollectionViewCell.swift */; };
+		B7ECC92524D06D2A00DCE050 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7ECC92424D06D2A00DCE050 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3BBF7C6CD934B9526C16E999 /* Pods_Simp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7267AC324B5044C004999B5 /* Simp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7267AC624B5044C004999B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7267AC824B5044C004999B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,9 @@
 		B777BB7624BCFA4F00099D05 /* ExpanseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpanseTextField.swift; sourceTree = "<group>"; };
 		B7CC046F24B7499500D617FF /* spentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spentTableViewCell.swift; sourceTree = "<group>"; };
 		B7CC047324B8FD1E00D617FF /* monthCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monthCollectionViewCell.swift; sourceTree = "<group>"; };
+		B7ECC92424D06D2A00DCE050 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ED5F2D04BD07F6FAFB6E6C23 /* Pods-Simp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simp.debug.xcconfig"; path = "Target Support Files/Pods-Simp/Pods-Simp.debug.xcconfig"; sourceTree = "<group>"; };
+		F0BCDEFF5EC0AA9C6B2D344C /* Pods-Simp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simp.release.xcconfig"; path = "Target Support Files/Pods-Simp/Pods-Simp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +51,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AC60E7D62595DB00EBF64DA /* Pods_Simp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C507C433FDE513F332D1EED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BBF7C6CD934B9526C16E999 /* Pods_Simp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		519B795AE3A23EC1A2BD3CF9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED5F2D04BD07F6FAFB6E6C23 /* Pods-Simp.debug.xcconfig */,
+				F0BCDEFF5EC0AA9C6B2D344C /* Pods-Simp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B7267ABA24B5044C004999B5 = {
 			isa = PBXGroup;
 			children = (
 				B7267AC524B5044C004999B5 /* Simp */,
 				B7267AC424B5044C004999B5 /* Products */,
+				519B795AE3A23EC1A2BD3CF9 /* Pods */,
+				2C507C433FDE513F332D1EED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +106,7 @@
 				B7267ACF24B5044E004999B5 /* Assets.xcassets */,
 				B7267AD124B5044E004999B5 /* LaunchScreen.storyboard */,
 				B7267AD424B5044E004999B5 /* Info.plist */,
+				B7ECC92424D06D2A00DCE050 /* GoogleService-Info.plist */,
 			);
 			path = Simp;
 			sourceTree = "<group>";
@@ -151,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7267AD724B5044E004999B5 /* Build configuration list for PBXNativeTarget "Simp" */;
 			buildPhases = (
+				0644697F4ADEE4C056BA5D20 /* [CP] Check Pods Manifest.lock */,
 				B7267ABF24B5044C004999B5 /* Sources */,
 				B7267AC024B5044C004999B5 /* Frameworks */,
 				B7267AC124B5044C004999B5 /* Resources */,
+				9A9AED2DD4B1026D29086978 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -203,12 +233,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7267AD324B5044E004999B5 /* LaunchScreen.storyboard in Resources */,
+				B7ECC92524D06D2A00DCE050 /* GoogleService-Info.plist in Resources */,
 				B7267AD024B5044E004999B5 /* Assets.xcassets in Resources */,
 				B7267ACE24B5044C004999B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0644697F4ADEE4C056BA5D20 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Simp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A9AED2DD4B1026D29086978 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Simp/Pods-Simp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Simp/Pods-Simp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Simp/Pods-Simp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B7267ABF24B5044C004999B5 /* Sources */ = {
@@ -366,6 +439,7 @@
 		};
 		B7267AD824B5044E004999B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED5F2D04BD07F6FAFB6E6C23 /* Pods-Simp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -384,6 +458,7 @@
 		};
 		B7267AD924B5044E004999B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0BCDEFF5EC0AA9C6B2D344C /* Pods-Simp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

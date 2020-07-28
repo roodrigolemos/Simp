@@ -45,6 +45,9 @@ class NewExpanseVC: UIViewController {
         installmentPicker.selectRow(0, inComponent: 0, animated: true)
     }
     
+    @IBAction func saveExpanseTapped(_ sender: Any) {
+    }
+    
     // MARK: Swift Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toCategory" {

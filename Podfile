@@ -7,12 +7,8 @@ target 'Simp' do
 
   # Pods for Simp
   pod 'Firebase/Analytics'
-  
-  pod 'Firebase/Core'
-  pod 'Firebase/Database'
-  
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
-
+  
 end

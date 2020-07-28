@@ -24,8 +24,6 @@ class HomeVC: UIViewController {
         tableViewSpent.dataSource = self
         tableViewSpent.dataSource = self
     }
-
-
 }
 
 extension HomeVC: UITableViewDataSource, UITableViewDelegate {

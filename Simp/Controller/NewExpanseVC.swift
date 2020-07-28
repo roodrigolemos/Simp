@@ -149,7 +149,8 @@ class NewExpanseVC: UIViewController {
 
 // MARK: EXTENSIONS
 extension NewExpanseVC: CategoryDelegate {
-    func selectedCategory(categoryImage: UIImage) {
+    func selectedCategory(category: Category) {
+        let categoryImage = UIImage(named: category.rawValue)
         categoryButton.setImage(categoryImage, for: .normal)
     }
 }

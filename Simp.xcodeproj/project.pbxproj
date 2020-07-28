@@ -23,6 +23,7 @@
 		B7CC047424B8FD1E00D617FF /* monthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC047324B8FD1E00D617FF /* monthCollectionViewCell.swift */; };
 		B7ECC92524D06D2A00DCE050 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7ECC92424D06D2A00DCE050 /* GoogleService-Info.plist */; };
 		B7ECC92724D0774000DCE050 /* Expanse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ECC92624D0774000DCE050 /* Expanse.swift */; };
+		B7ECC92A24D0A00900DCE050 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ECC92924D0A00900DCE050 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		B7CC047324B8FD1E00D617FF /* monthCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monthCollectionViewCell.swift; sourceTree = "<group>"; };
 		B7ECC92424D06D2A00DCE050 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B7ECC92624D0774000DCE050 /* Expanse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expanse.swift; sourceTree = "<group>"; };
+		B7ECC92924D0A00900DCE050 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ED5F2D04BD07F6FAFB6E6C23 /* Pods-Simp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simp.debug.xcconfig"; path = "Target Support Files/Pods-Simp/Pods-Simp.debug.xcconfig"; sourceTree = "<group>"; };
 		F0BCDEFF5EC0AA9C6B2D344C /* Pods-Simp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simp.release.xcconfig"; path = "Target Support Files/Pods-Simp/Pods-Simp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +100,7 @@
 		B7267AC524B5044C004999B5 /* Simp */ = {
 			isa = PBXGroup;
 			children = (
+				B7ECC92824D09FC700DCE050 /* Utilities */,
 				B7CC046C24B7492B00D617FF /* Model */,
 				B7CC046D24B7493600D617FF /* View */,
 				B7CC046E24B7493B00D617FF /* Controller */,
@@ -172,6 +175,14 @@
 				B7CC047324B8FD1E00D617FF /* monthCollectionViewCell.swift */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		B7ECC92824D09FC700DCE050 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B7ECC92924D0A00900DCE050 /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +312,7 @@
 				B777BB7224BCF2EE00099D05 /* NewExpanseVC.swift in Sources */,
 				B729728024BDF544000D1E27 /* typeTransactionTextField.swift in Sources */,
 				B7267AC924B5044C004999B5 /* SceneDelegate.swift in Sources */,
+				B7ECC92A24D0A00900DCE050 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

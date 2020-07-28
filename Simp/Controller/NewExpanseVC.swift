@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class NewExpanseVC: UIViewController {
    
@@ -46,6 +47,7 @@ class NewExpanseVC: UIViewController {
     }
     
     @IBAction func saveExpanseTapped(_ sender: Any) {
+        
     }
     
     // MARK: Swift Methods

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		B7CC047024B7499500D617FF /* spentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC046F24B7499500D617FF /* spentTableViewCell.swift */; };
 		B7CC047424B8FD1E00D617FF /* monthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CC047324B8FD1E00D617FF /* monthCollectionViewCell.swift */; };
 		B7ECC92524D06D2A00DCE050 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7ECC92424D06D2A00DCE050 /* GoogleService-Info.plist */; };
+		B7ECC92724D0774000DCE050 /* Expanse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ECC92624D0774000DCE050 /* Expanse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		B7CC046F24B7499500D617FF /* spentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spentTableViewCell.swift; sourceTree = "<group>"; };
 		B7CC047324B8FD1E00D617FF /* monthCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monthCollectionViewCell.swift; sourceTree = "<group>"; };
 		B7ECC92424D06D2A00DCE050 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B7ECC92624D0774000DCE050 /* Expanse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expanse.swift; sourceTree = "<group>"; };
 		ED5F2D04BD07F6FAFB6E6C23 /* Pods-Simp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simp.debug.xcconfig"; path = "Target Support Files/Pods-Simp/Pods-Simp.debug.xcconfig"; sourceTree = "<group>"; };
 		F0BCDEFF5EC0AA9C6B2D344C /* Pods-Simp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simp.release.xcconfig"; path = "Target Support Files/Pods-Simp/Pods-Simp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,7 +74,6 @@
 				ED5F2D04BD07F6FAFB6E6C23 /* Pods-Simp.debug.xcconfig */,
 				F0BCDEFF5EC0AA9C6B2D344C /* Pods-Simp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,6 +132,7 @@
 		B7CC046C24B7492B00D617FF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B7ECC92624D0774000DCE050 /* Expanse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,6 +294,7 @@
 				B7CC047024B7499500D617FF /* spentTableViewCell.swift in Sources */,
 				B7267ACB24B5044C004999B5 /* HomeVC.swift in Sources */,
 				B729727E24BDEE3E000D1E27 /* typeTransactionButton.swift in Sources */,
+				B7ECC92724D0774000DCE050 /* Expanse.swift in Sources */,
 				B777BB7724BCFA4F00099D05 /* ExpanseTextField.swift in Sources */,
 				B7CC047424B8FD1E00D617FF /* monthCollectionViewCell.swift in Sources */,
 				B7267AC724B5044C004999B5 /* AppDelegate.swift in Sources */,
